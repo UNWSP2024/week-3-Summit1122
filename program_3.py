@@ -11,9 +11,21 @@
 
 def weight_conversion(weight):
     # Calculate the shipping charge.
+    global price_pound
     shippingCost = 0.0
     ######################
-    # WRITE YOUR CODE HERE
+
+    if weight <= 2:
+        price_pound = 1.50
+    elif 2 < weight <= 6:
+        price_pound = 3.00
+    elif 6 < weight <= 10:
+        price_pound = 4.00
+    elif 10 < weight:
+        price_pound = 4.75
+
+    shippingCost = weight * price_pound
+
     ######################
     
     return shippingCost
