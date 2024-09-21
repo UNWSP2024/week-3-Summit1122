@@ -1,18 +1,29 @@
 # Write a program that asks the user to enter a person's age.  The program should display a message indicating whether the person is an infant, a child, a teenager, or an adult.  Following are the guidelines:
 
+
+
 # If the person is 1 year old or less, it should display "infant" (without quotes).
 # If the person is older than 1 year, but younger than 13 years, it should display "child".
 # If the person is at least 13 years old, but less than 20 years old, it should display "teenager".
-# If the person is at least 20 year old, it should display "adult".
+# If the person is at least 20-year-old, it should display "adult".
 
 def categorize_age(age):
-    ageCategory = "TBD"
-    ######################
-    # WRITE YOUR CODE HERE
+
     ######################
 
+    global group
+    if age <= 1:
+        group = "infant"
+    elif 1 < age < 13:
+        group = "child"
+    elif 13 <= age < 20:
+        group = "teenager"
+    elif age >= 20:
+        group = "adult"
+    ######################
+    agecategory = group
 
-    return ageCategory
+    return agecategory
 
 
 #### This piece of the code has been done for you,
